@@ -10,12 +10,14 @@ program blas2
   real(4) :: alpha, beta
   real(8) :: error
   real(8) :: temp
+  real(8) :: timed, gflops
   
   
   integer :: i, j, imax, jmax
   integer, dimension(8) :: values
   integer :: seed
   integer :: index
+  integer(kind=8) :: t1, t2, clock_rate, clock_max
 
   character(len=1) :: transa, transb
 
@@ -62,8 +64,19 @@ program blas2
   beta = 0.0
   transa = 'N'
   transb = 'N'
+  call system_clock(t1, clock_rate, clock_max)
   call sgemm(transa,transb,imax,jmax,imax,alpha,a,imax,b,imax,beta,c,imax)
-
+  call system_clock(t2, clock_rate, clock_max)
+  
+  timed = float(t2-t1) / float(clock_rate)
+  gflops = float(imax)
+  gflops = gflops*float(jmax)
+  gflops = gflops*float(imax)
+  gflops = 2.0*gflops*1.0e-9 / timed
+  
+  print*, 'Elapsed time : ', timed
+  print*, 'Performance  : ', gflops,' GFLOPS'
+  
   print*, 'Checking for correctness....'
   matC = matmul(matA, matB)
 
