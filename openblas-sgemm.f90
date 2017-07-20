@@ -1,3 +1,8 @@
+!How to compile
+!Dynamic linking
+! $gfortran -o filename filename.f90 -lopenblas -lpthread
+!Static linking
+! $gfortran -o filename filename.f90 /your/path/to/libopenblas.a -lpthread
 program blas2
   implicit none
   real(4), allocatable, dimension(:) :: a, b, c
