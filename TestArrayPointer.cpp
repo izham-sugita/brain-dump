@@ -1,3 +1,10 @@
+/*
+To remove limit imposed by system's stack memory:
+$ ulimit -s unlimited
+This will allow you to define static array as big as your resource.
+This code is an exercise of using pointer and static array.
+*/
+
 #include<cstdlib>
 #include<cstdio>
 
