@@ -11,3 +11,8 @@ and Linux box, so its quite safe to use. The main benefit of raw binary data is 
 could not remember the specific, but hey, its fast) compared to ASCII format files. Massive credit to Renato N. Elias
 for sharing his Fortran version from the link http://public.kitware.com/pipermail/vtkusers/2007-April/041227.html . I just modified
 his Fortran version to C.
+
+# brain-dump 11/9/2017
+Added ArrayFireHeatEq.cu file. This file contains an example of how to call CUDA kernel using ArrayFire v3.4 libary as boilerplate.
+Massive credit to Prof. Aoki for publishing the code in his book "はじめてのCUDAプログラミング―驚異の開発環境[GPU+CUDA]を使いこなす!" 
+in Japanese. The book is a must have for anyone starting CUDA. Too bad its in Japanese only. 
