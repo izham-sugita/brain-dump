@@ -1,0 +1,13 @@
+gcc -o filename filename.c /your/path/to/static/libopenblas.a -lpthread
+
+On my machine:
+/usr/lib/libopenblas.a
+
+
+how to change threads number:
+export OPENBLAS_NUM_THREADS=4 (depends on your machine)
+
+Compiling with static library will create a big binary file. OpenBLAS can also
+be dynamically link by compiling your code with -lopenblas option.
+
+gcc -I /dir/of/your/libopenblas.so/file -o your_binary_file your_code_file.c -lpthread -lopenblas
