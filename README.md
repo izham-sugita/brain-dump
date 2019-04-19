@@ -16,3 +16,6 @@ his Fortran version to C.
 Added ArrayFireHeatEq.cu file. This file contains an example of how to call CUDA kernel using ArrayFire v3.4 libary as boilerplate.
 Massive credit to Prof. Aoki for publishing the code in his book "はじめてのCUDAプログラミング―驚異の開発環境[GPU+CUDA]を使いこなす!" 
 in Japanese. The book is a must have for anyone starting CUDA. Too bad its in Japanese only. 
+
+# brain-dump 19/4/2019
+Added a shell script for building clang-8 compiler with OpenMP GPU offload capability. The script will automate everything up to installation. User need only to add path to /bin and /lib later.
