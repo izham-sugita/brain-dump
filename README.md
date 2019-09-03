@@ -19,3 +19,6 @@ in Japanese. The book is a must have for anyone starting CUDA. Too bad its in Ja
 
 # brain-dump 19/4/2019
 Added a shell script for building clang-8 compiler with OpenMP GPU offload capability. The script will automate everything up to installation. User need only to add path to /bin and /lib later.
+
+# brain-dump 3/9/2019
+Added my resume. Just for a reminder to myself.
