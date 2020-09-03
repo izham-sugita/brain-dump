@@ -22,3 +22,7 @@ Added a shell script for building clang-8 compiler with OpenMP GPU offload capab
 
 # brain-dump 3/9/2019
 Added my resume. Just for a reminder to myself.
+
+# brain-dump 3/9/2020
+Just nice one-year. Rename scipy-blas-dgemm.py and scipy-blas-sgemm.py to 
+separate the single and double precision matrix multiplication.
